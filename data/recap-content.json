@@ -1,0 +1,297 @@
+{
+  "welcomeImages": [
+    {
+      "name": "Anderyn",
+      "src": "/andy.png",
+      "position": "left-[4%] top-[14%]"
+    },
+    {
+      "name": "Ivanrhae",
+      "src": "/ivan.png",
+      "position": "right-[5%] top-[18%]"
+    },
+    {
+      "name": "EmmisuTTV",
+      "src": "/emmisu.png",
+      "position": "left-[13%] bottom-[15%]"
+    },
+    {
+      "name": "Matrix",
+      "src": "/matrix.png",
+      "position": "right-[15%] bottom-[12%]"
+    },
+    {
+      "name": "CXJuvy",
+      "src": "/juvy.png",
+      "position": "left-[34%] top-[10%]"
+    },
+    {
+      "name": "Chiza",
+      "src": "/chiza.gif",
+      "position": "right-[34%] bottom-[10%]"
+    },
+    {
+      "name": "ephy",
+      "src": "/ephy.jpg",
+      "position": "left-[24%] top-[24%]"
+    },
+    {
+      "name": "ysa_abel",
+      "src": "/erik.png",
+      "position": "right-[40%] top-[5%]"
+    },
+    {
+      "name": "Pingpoo",
+      "src": "/pingpoo.png",
+      "position": "left-[5%] top-[52%]"
+    },
+    {
+      "name": "Kazuru",
+      "src": "/kazu.png",
+      "position": "right-[6%] top-[58%]"
+    },
+    {
+      "name": "LuaaVT",
+      "src": "/kaos.png",
+      "position": "left-[40%] bottom-[5%]"
+    },
+    {
+      "name": "Soapdax",
+      "src": "/h.png",
+      "position": "right-[24%] top-[30%]"
+    }
+  ],
+  "chorus": [
+    {
+      "name": "ysa_abel",
+      "role": "wifey",
+      "image": "/erik.png",
+      "video": "/clips/ysa_abel.mp4"
+    },
+    {
+      "name": "LuaaVT",
+      "role": "friend",
+      "image": "/kaos.png",
+      "video": "/clips/luaavt.mp4"
+    },
+    {
+      "name": "EmmisuTTV",
+      "role": "friend",
+      "image": "/emmisu.png",
+      "video": "/clips/emmisuttv.mp4"
+    },
+    {
+      "name": "Twin",
+      "role": "friend",
+      "image": "/twin.png",
+      "video": "/clips/twin.mp4"
+    },
+    {
+      "name": "Kazu",
+      "role": "friend",
+      "image": "/kazu.png",
+      "video": "/clips/kazuru.mp4"
+    },
+    {
+      "name": "Miko",
+      "role": "friend",
+      "image": "/miko.png",
+      "video": "/clips/miko.mp4"
+    },
+    {
+      "name": "Matrix",
+      "role": "friend",
+      "image": "/matrix.png",
+      "video": "/clips/miko.mp4"
+    },
+    {
+      "name": "Pingpoo",
+      "role": "friend",
+      "image": "/pingpoo.png",
+      "video": "/clips/pingpoo.mp4"
+    },
+    {
+      "name": "Buns",
+      "role": "friend",
+      "image": "/buns.png",
+      "video": "/clips/buns.mp4",
+      "message": "🎂🎉 Happy Birthday bestest koha! 🎉🎂 I hope your birthday is filled with so much joy, love, and all the good things you deserve!! And not just today, but every single day, because you're genuinely such an amazing person and you deserve the world!! We don't hang out nearly as much as we should, and honestly, I think we need to change that!! You're such an awesome person, and your vibes genuinely transcend the stratosphere! I hope you have the most wonderful birthday ever, koha!! 💖 -BUN"
+    },
+    {
+      "name": "Chiza",
+      "role": "friend",
+      "image": "/chiza.gif",
+      "video": "/clips/chiza.mp4"
+    },
+    {
+      "name": "Ivan",
+      "role": "friend",
+      "image": "/ivan.png",
+      "video": "/clips/ivan.mp4"
+    },
+    {
+      "name": "Juny",
+      "role": "friend",
+      "image": "/juny.png",
+      "video": "/clips/juny.mp4"
+    },
+    {
+      "name": "Oni",
+      "role": "friend",
+      "image": "/oni.png",
+      "video": "/clips/oni.mp4"
+    },
+    {
+      "name": "Pandi",
+      "role": "friend",
+      "image": "/pandi.png",
+      "video": "/clips/pandi.mp4"
+    },
+    {
+      "name": "Qawsed",
+      "role": "friend",
+      "image": "/qawsed.png",
+      "video": "/clips/qawsed.mp4"
+    },
+    {
+      "name": "Sarcasm",
+      "role": "friend",
+      "image": "/sarcasm.png",
+      "video": "/clips/sarcasm.mov"
+    },
+    {
+      "name": "Soapdax",
+      "role": "friend",
+      "image": "/h.png",
+      "video": "/clips/soapdax.mov"
+    },
+    {
+      "name": "Toka",
+      "role": "friend",
+      "image": "/toka.png",
+      "video": "/clips/toka.mp4"
+    },
+    {
+      "name": "ChinnieVT",
+      "role": "friend",
+      "image": "/chinnievt.png",
+      "video": "/clips/chinnievt.mov"
+    },
+    {
+      "name": "Omar",
+      "role": "friend",
+      "image": "/omar.jpg",
+      "message": "happy birthday koha!!!! make sure to enjoy it to its fullest you deserve it, hopefully to another year full of amazing streams from our favorite streamer 💜"
+    },
+    {
+      "name": "Shade",
+      "role": "friend",
+      "image": "/shade.png",
+      "message": "Looking back to the Koha I met a few years back, you were a shy girl with very few friends, looking at you now you’ve grown into an amazing person, who’s confident in herself, makes friends easily and doesn’t let anyone get behind your skin, you might be older than me, but seeing you grow as a person over the years truly makes me feel like a proud father. I’m grateful to have met you, and I hope to say this again next year, I’m proud of you, happy birthday."
+    },
+    {
+      "name": "Noah",
+      "role": "friend",
+      "image": "/noah.gif",
+      "message": "HAPPY BIRTHDAY!!!!!!!!!!!!!!!"
+    },
+    {
+      "name": "GHOST1013_",
+      "role": "friend",
+      "image": "/ghost.gif",
+      "message": "Happy birfday kohaaa hope you enjoy it and eat yummy food!!!"
+    },
+    {
+      "name": "Joe",
+      "role": "friend",
+      "image": "/joe.png",
+      "audio": "/audio/joe.mp3"
+    },
+    {
+      "name": "Kisaro",
+      "role": "the goat",
+      "image": "/kisa.png",
+      "audio": "/audio/keane.m4a"
+    },
+    {
+      "name": "Cilwin",
+      "role": "friend",
+      "image": "/cilwin.jpg",
+      "audio": "/audio/cilwin.m4a"
+    },
+    {
+      "name": "Shuvimo",
+      "role": "friend",
+      "image": "/shuvimo.png",
+      "message": "Happy birthday koha wowowowowowowowowowow Im so happy I was able to find and meet you! Since the first time I met you, Ive had so much fun talking and hope we can play lots moreeee!!!!! And no matter what situation you are in I am always here for youuu. Hope no matter what state you are in, I wish you the best birthday ever and for at least for this day, you can have the most fun with us all and especially yourself!!!"
+    },
+    {
+      "name": "Deathlord",
+      "role": "friend",
+      "image": "/deathlord.png",
+      "message": "Happy Birthday Koohaaruuuuuuuuu-chan I wish you a very lovely blessing life with much of happiness and health I know we have not interact a lot, but at least I am here to give you the happy birthdays that you deserve I hope for you the best and only the best and I wish for your goals to be reach. Remember this even on your hardest times... Never Give Up On Your Dreams Happy Birthday ones again and here is your gift ( SMIRK ) With Much Love Deathy :3",
+      "photo": "smirk.png"
+    },
+    {
+      "name": "Sushi",
+      "role": "friend",
+      "image": "/sushi.gif",
+      "message": "Happy Birthday Koha! It's that time of the month...your special day (' v ')/🎉I hope you are surrounded by friends, family and overall lovely people on your birthday. Hope you also get gifts or a cake also...gotta remember the birthday cake for the birthday womaan!!"
+    },
+    {
+      "name": "Kriss",
+      "role": "friend",
+      "image": "/kriss.gif",
+      "message": "Kohaaaa!!! Happy Birthday!!! yippe 🎉🎉 Hope you have a lovely day, it has been a blessing to have you around! ❤️ You are so wonderful and amazing! such a lovely person who makes my days brighter 🎉 Hope you can keep celebrating so many more wonderful birthdays with your friends and your community 🎉🔥 and yes... you are so demure, whatever it means but it is so funny when you say it 😂"
+    }
+  ],
+  "creators": [
+    {
+      "name": "Ephy",
+      "role": "Dihveloper",
+      "image": "/ephy.jpg",
+      "message": "HAPPY BIRTHDAYYYY KOHAAAAA, its been already a year since we became friends, and i might say ur one of the sweetest and greatest persons i had the pleasure to meet in my life, and i hope life repays ur energy and ur kidness with nothing but positive things. I hope you have a wonderful birthday and get to enjoy it with the people you love the most. Happy birthday, hope you liked this little present <3 and see you next time! PD: ngl i already said what i wanted to say but this bitchass juvy guy just went off typing and typing shi holy yap, and theres a padding gap between the cards that im too lazy to fix rn, and i prolly wont fix later, cause i dont wanna, so now im just filling this shi with random text, and why is this shi so long yo juvy fuck you, you know what fuck everyone whos reading this as well, and im still typing shi im geniuly gonna explode.",
+      "photo": "/stare.jpg"
+    },
+    {
+      "name": "CXJuvy",
+      "role": "Organizer",
+      "image": "/juvy.png",
+      "message": "Happy birthday Koha!!! I hope you liked this little surprise I organized together with the community. Thank you for being such an amazing friend. My life wouldn't be as fun as it is now without you in it. So thank you for raiding me on that wonderful day. I Today is your day and I hope that you are having a blast today. You deserve it and so much more. I hope you know how much I appreciate you and that will never change. I hope you are having as much fun as you can. We have been through a lot together and we are still such great friends and that's why I know we will continue to have a lot of fun together for years to come. So stand proud Koharu, you are the goat and without you I think I wouldn't be where I am now. I could write a whole book about why I'm thankful for you but I don't think anyone's waiting on that LMAO. Thank you and once again happy birthday Koha. "
+    }
+  ],
+  "thanks": [
+    { "name": "ysa_abel", "role": "wifey", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "LuaaVT", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "EmmisuTTV", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Twin", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Kazu", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Miko", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Matrix", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Pingpoo", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Buns", "role": "friend/artist", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Chiza", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Ivan", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Juny", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Oni", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Pandi", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Qawsed", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Sarcasm", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Soapdax", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Toka", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "ChinnieVT", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Omar", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Shade", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Noah", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "GHOST1013_", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Joe", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Kisaro", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Cilwin", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Shuvimo", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Deathlord", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Sushi", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Kriss", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "Anderyn", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" },
+    { "name": "CXJuvy", "role": "friend", "contribution": "taking their time to remind you how much they love you <3" }
+  ]
+}
