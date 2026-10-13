@@ -100,6 +100,80 @@ function youtubeEmbed(input: string) {
   return `https://www.youtube-nocookie.com/embed/${id}?rel=0${start ? `&start=${start}` : ""}`
 }
 
+type FloatingHeart = { id: number; dx: number; dy: number; size: number; rotate: number; duration: number; color: string }
+
+const HEART_COLORS = ["text-pink-400", "text-rose-500", "text-primary", "text-pink-300"]
+
+// Easter egg: hearts burst out of the wrapped image while it is hovered. Pass enabled={false} to leave an image untouched.
+function HeartBurst({ children, enabled = true }: { children: ReactNode; enabled?: boolean }) {
+  const [hearts, setHearts] = useState<FloatingHeart[]>([])
+  const [hovering, setHovering] = useState(false)
+  const nextId = useRef(0)
+  const interval = useRef<number | undefined>(undefined)
+  const cutoff = useRef<number | undefined>(undefined)
+
+  const spawn = (count: number, radial: boolean) => {
+    const fresh = Array.from({ length: count }, () => {
+      const angle = radial ? Math.random() * Math.PI * 2 : -Math.PI / 2 + (Math.random() - 0.5) * 1.4
+      const distance = radial ? 90 + Math.random() * 90 : 110 + Math.random() * 100
+      return {
+        id: nextId.current++,
+        dx: Math.cos(angle) * distance,
+        dy: Math.sin(angle) * distance - (radial ? 0 : 20),
+        size: 14 + Math.random() * 18,
+        rotate: (Math.random() - 0.5) * 70,
+        duration: 1.4 + Math.random() * 1,
+        color: HEART_COLORS[Math.floor(Math.random() * HEART_COLORS.length)],
+      }
+    })
+    setHearts((current) => [...current.slice(-40), ...fresh])
+  }
+
+  const stop = () => {
+    window.clearInterval(interval.current)
+    window.clearTimeout(cutoff.current)
+    setHovering(false)
+  }
+
+  const start = () => {
+    stop()
+    setHovering(true)
+    spawn(12, true)
+    interval.current = window.setInterval(() => spawn(2, false), 200)
+    cutoff.current = window.setTimeout(stop, 6000)
+  }
+
+  useEffect(() => () => { window.clearInterval(interval.current); window.clearTimeout(cutoff.current) }, [])
+
+  if (!enabled) return <>{children}</>
+
+  return (
+    <motion.div
+      className="relative"
+      onMouseEnter={start}
+      onMouseLeave={stop}
+      animate={hovering ? { scale: [1, 1.08, 1, 1.08, 1] } : { scale: 1 }}
+      transition={hovering ? { duration: 1.1, repeat: Infinity, ease: "easeInOut" } : { duration: 0.3 }}
+    >
+      {children}
+      <div className="pointer-events-none absolute inset-0 z-30" aria-hidden="true">
+        {hearts.map((heart) => (
+          <motion.span
+            key={heart.id}
+            className={`absolute left-1/2 top-1/2 -ml-2 -mt-2 ${heart.color}`}
+            initial={{ x: 0, y: 0, scale: 0, opacity: 1, rotate: 0 }}
+            animate={{ x: heart.dx, y: heart.dy, scale: [0, 1.2, 0.9], opacity: [1, 1, 0], rotate: heart.rotate }}
+            transition={{ duration: heart.duration, ease: "easeOut", times: [0, 0.3, 1] }}
+            onAnimationComplete={() => setHearts((current) => current.filter((item) => item.id !== heart.id))}
+          >
+            <Heart className="fill-current drop-shadow-[0_0_6px_rgba(244,114,182,0.7)]" style={{ width: heart.size, height: heart.size }} />
+          </motion.span>
+        ))}
+      </div>
+    </motion.div>
+  )
+}
+
 function ChorusCardView({ card }: { card: ChorusCard }) {
   const [open, setOpen] = useState(false)
   return (
@@ -236,7 +310,9 @@ export function RecapExperience() {
             transition={{ type: "spring", stiffness: 160, damping: 11, mass: 0.9, delay: index * 0.12, opacity: { duration: 0.25, delay: index * 0.12 } }}
           >
             <div className={`animate-float-${index + 1}`}>
-              <Image src={friend.src} alt={friend.name} width={96} height={96} unoptimized className="pixelated rounded-2xl border border-primary/30 bg-card/70 p-2 shadow-xl transition duration-300 hover:z-20 hover:scale-150 hover:rotate-6 hover:border-primary hover:shadow-2xl hover:shadow-primary/30" />
+              <HeartBurst enabled={friend.name === "ysa_abel"}>
+                <Image src={friend.src} alt={friend.name} width={96} height={96} unoptimized className="pixelated rounded-2xl border border-primary/30 bg-card/70 p-2 shadow-xl transition duration-300 hover:z-20 hover:scale-150 hover:rotate-6 hover:border-primary hover:shadow-2xl hover:shadow-primary/30" />
+              </HeartBurst>
             </div>
           </motion.div>
         ))}
