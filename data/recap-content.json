@@ -93,6 +93,12 @@
       "video": "/clips/kazuru.mp4"
     },
     {
+      "name": "Andy",
+      "role": "friend",
+      "image": "/andy.png",
+      "video": "/clips/andy.mov"
+    },
+    {
       "name": "Miko",
       "role": "friend",
       "image": "/miko.png",
@@ -163,7 +169,7 @@
       "name": "Soapdax",
       "role": "friend",
       "image": "/h.png",
-      "video": "/clips/soapdax.mov"
+      "video": "/clips/soapdax.mp4"
     },
     {
       "name": "Toka",

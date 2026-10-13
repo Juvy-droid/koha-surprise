@@ -20,6 +20,7 @@ type ChorusCard = {
   audio?: string
   twitch?: string
   photo?: string
+  youtube?: string
 }
 
 type ThanksPerson = {
@@ -89,6 +90,16 @@ function ParallaxGlow({ className = "", range = 140 }: { className?: string; ran
   )
 }
 
+const INTRO_YOUTUBE = "https://youtu.be/zPDxgeGOhn4"
+
+// Accepts a full YouTube link (watch, youtu.be, shorts, live, embed) or just the 11-character video id.
+function youtubeEmbed(input: string) {
+  const id = input.match(/(?:youtu\.be\/|v=|embed\/|shorts\/|live\/)([\w-]{11})/)?.[1] ?? input.match(/^([\w-]{11})$/)?.[1]
+  if (!id) return null
+  const start = input.match(/[?&](?:t|start)=(\d+)/)?.[1]
+  return `https://www.youtube-nocookie.com/embed/${id}?rel=0${start ? `&start=${start}` : ""}`
+}
+
 function ChorusCardView({ card }: { card: ChorusCard }) {
   const [open, setOpen] = useState(false)
   return (
@@ -97,10 +108,10 @@ function ChorusCardView({ card }: { card: ChorusCard }) {
         <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-primary/25 to-card">
           <Image src={card.image} alt={`${card.name} portrait`} fill unoptimized className="object-cover transition duration-700 group-hover:scale-110" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-          <div className="absolute bottom-4 left-5 right-5 flex items-end justify-between gap-3"><div><p className="text-xl font-bold text-white">{card.name}</p><p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">{card.role}</p></div><span className="rounded-full border border-white/30 bg-background/70 p-3 text-primary transition-transform group-hover:scale-110 group-active:scale-90">{card.video || card.twitch ? <Video className="size-4" /> : card.audio ? <Mic2 className="size-4" /> : card.photo ? <ImageIcon className="size-4" /> : <Heart className="size-4" />}</span></div>
+          <div className="absolute bottom-4 left-5 right-5 flex items-end justify-between gap-3"><div><p className="text-xl font-bold text-white">{card.name}</p><p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">{card.role}</p></div><span className="rounded-full border border-white/30 bg-background/70 p-3 text-primary transition-transform group-hover:scale-110 group-active:scale-90">{card.video || card.twitch || card.youtube ? <Video className="size-4" /> : card.audio ? <Mic2 className="size-4" /> : card.photo ? <ImageIcon className="size-4" /> : <Heart className="size-4" />}</span></div>
         </div>
       </button>
-      <CardContent className="flex flex-col gap-4 p-5"><p className="text-sm leading-6 text-muted-foreground">{card.message || ""}</p>{open && <div className="animate-in fade-in slide-in-from-top-2 duration-500">{card.photo && <Image src={card.photo} alt={`${card.name} attachment`} width={0} height={0} sizes="(min-width: 1024px) 33vw, 100vw" unoptimized style={{ width: "100%", height: "auto" }} className="rounded-xl border border-border" />}{card.video && <video className="w-full rounded-xl border border-border" controls preload="metadata" src={card.video}><track kind="captions" /></video>}{card.audio && <audio aria-label={`${card.name} voice note`} className="w-full" controls preload="metadata" src={card.audio} />}{card.twitch && <iframe title={`${card.name} Twitch clip`} src={`${card.twitch}${card.twitch.includes("?") ? "&" : "?"}parent=localhost`} className="aspect-video w-full rounded-xl border border-border" allow="autoplay; fullscreen" allowFullScreen />}</div>}</CardContent>
+      <CardContent className="flex flex-col gap-4 p-5"><p className="text-sm leading-6 text-muted-foreground">{card.message || ""}</p>{open && <div className="animate-in fade-in slide-in-from-top-2 duration-500">{card.photo && <Image src={card.photo} alt={`${card.name} attachment`} width={0} height={0} sizes="(min-width: 1024px) 33vw, 100vw" unoptimized style={{ width: "100%", height: "auto" }} className="rounded-xl border border-border" />}{card.video && <video className="w-full rounded-xl border border-border" controls preload="metadata" src={card.video}><track kind="captions" /></video>}{card.youtube && youtubeEmbed(card.youtube) && <iframe title={`${card.name} YouTube video`} src={youtubeEmbed(card.youtube) ?? undefined} className="aspect-video w-full rounded-xl border border-border" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" allowFullScreen loading="lazy" />}{card.audio && <audio aria-label={`${card.name} voice note`} className="w-full" controls preload="metadata" src={card.audio} />}{card.twitch && <iframe title={`${card.name} Twitch clip`} src={`${card.twitch}${card.twitch.includes("?") ? "&" : "?"}parent=localhost`} className="aspect-video w-full rounded-xl border border-border" allow="autoplay; fullscreen" allowFullScreen />}</div>}</CardContent>
     </Card>
   )
 }
@@ -249,7 +260,7 @@ export function RecapExperience() {
             <Reveal delay={0.4}><div className="mt-6 flex items-center gap-3 text-sm text-muted-foreground"><Heart className="size-4 animate-pulse text-primary" /> - Juvy</div></Reveal>
           </div>
           <Reveal from="right" delay={0.15}>
-            <div className="aspect-video overflow-hidden rounded-3xl border border-primary/30 bg-card shadow-2xl shadow-primary/10"><video className="size-full object-cover" controls preload="metadata" src="clips/intro.mov" poster="/intro.png"><track kind="captions" /><span>Your browser does not support video playback.</span></video></div>
+            <div className="aspect-video overflow-hidden rounded-3xl border border-primary/30 bg-card shadow-2xl shadow-primary/10">{INTRO_YOUTUBE && youtubeEmbed(INTRO_YOUTUBE) ? <iframe title="Intro video" src={youtubeEmbed(INTRO_YOUTUBE) ?? undefined} className="size-full" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" allowFullScreen loading="lazy" /> : <video className="size-full object-cover" controls preload="metadata" poster="/intro.png"><track kind="captions" /><span>Your browser does not support video playback.</span></video>}</div>
           </Reveal>
         </div>
       </section>
